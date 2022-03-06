@@ -1,3 +1,8 @@
 body {
     font-family: Helvetica, "Helvetica Neue", sans-serif;
 }
+.purple {
+    color: purple;
+}
+.makebigger {font-size: 120%;
+}
