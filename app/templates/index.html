@@ -3,63 +3,118 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>This is Shequera's Website!</title>
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
         <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
     {% endblock %}
 
 </head>
 <body>
-<div id="main_menu" class="purple makebigger">
-    <h1>Shequera's First Webpage</h1>
-</div>
-<div id="main_content">
-    <p>
-        <span class="purple makebigger">Lorem</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Magna fermentum iaculis eu non
-    diam phasellus vestibulum lorem. Mattis molestie a iaculis at erat. Ullamcorper velit sed ullamcorper morbi
-    tincidunt ornare massa. Fermentum posuere urna nec tincidunt praesent. Proin sagittis nisl rhoncus mattis rhoncus
-    urna. Sed odio morbi quis commodo odio aenean. Odio ut sem nulla pharetra. Mattis ullamcorper velit sed ullamcorper.
-    Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Arcu dictum varius duis at consectetur
-    lorem donec massa. Ipsum suspendisse ultrices gravida dictum fusce. Iaculis urna id volutpat lacus. Ac tincidunt
-    vitae semper quis lectus nulla at volutpat diam. Facilisi cras fermentum odio eu feugiat. Pretium aenean pharetra
-    magna ac placerat vestibulum lectus mauris ultrices. Consequat ac felis donec et odio pellentesque. Commodo sed
-    egestas egestas fringilla phasellus faucibus scelerisque. </p>
-<p>
-    Lectus vestibulum mattis ullamcorper velit. Venenatis urna cursus eget nunc. Pellentesque elit ullamcorper dignissim
-    cras tincidunt lobortis feugiat. A pellentesque sit amet porttitor eget. Ipsum dolor sit amet consectetur adipiscing
-    elit duis tristique. Id donec ultrices tincidunt arcu non sodales neque sodales ut. Urna nunc id cursus metus
-    aliquam eleifend mi. Mauris nunc congue nisi vitae suscipit tellus. Volutpat maecenas volutpat blandit aliquam etiam
-    erat velit scelerisque in. Pretium lectus quam id leo in vitae turpis. Vivamus at augue eget arcu dictum varius duis
-    at consectetur. Sed vulputate mi sit amet mauris commodo quis imperdiet. Bibendum enim facilisis gravida neque
-    convallis a cras semper. Risus feugiat in ante metus dictum at tempor commodo. Dui accumsan sit amet nulla facilisi
-    morbi tempus iaculis urna. Purus sit amet luctus venenatis lectus magna fringilla urna. Et malesuada fames ac
-    turpis. </p>
-<p>
-    Tempor nec feugiat nisl pretium fusce. Mi proin sed libero enim. Fusce ut placerat orci nulla pellentesque
-    dignissim. Dictum varius duis at consectetur. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis.
-    Tellus mauris a diam maecenas sed enim ut. Cursus in hac habitasse platea dictumst quisque sagittis purus sit.
-    Posuere urna nec tincidunt praesent semper. Eget nulla facilisi etiam dignissim diam quis. Aliquam sem et tortor
-    consequat id porta nibh venenatis. Luctus venenatis lectus magna fringilla urna porttitor rhoncus. Odio pellentesque
-    diam volutpat commodo sed egestas. </p>
-<p>
-    Leo duis ut diam quam nulla porttitor. Fringilla ut morbi tincidunt augue interdum. At in tellus integer feugiat
-    scelerisque varius morbi enim. Curabitur gravida arcu ac tortor dignissim convallis aenean et. Praesent elementum
-    facilisis leo vel fringilla est. Amet est placerat in egestas. Sem nulla pharetra diam sit. Fermentum dui faucibus
-    in ornare quam viverra orci sagittis eu. Nam aliquam sem et tortor consequat id porta nibh venenatis. Commodo nulla
-    facilisi nullam vehicula ipsum a arcu cursus. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.
-    </p>
-<p>
-    Fermentum et sollicitudin ac orci phasellus. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus.
-    Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Metus aliquam eleifend mi in. Tincidunt nunc pulvinar
-    sapien et ligula. Facilisis mauris sit amet massa vitae tortor. Neque laoreet suspendisse interdum consectetur
-    libero. Ipsum dolor sit amet consectetur. Aliquam vestibulum morbi blandit cursus risus. Venenatis tellus in metus
-    vulputate eu scelerisque felis imperdiet. Arcu risus quis varius quam. Nam aliquam sem et tortor.
-    </p>
+<div class="container">
+    <div class="row">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"/>
+                </svg>
+                <span class="fs-4">My first Bootstrap Site</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link" aria-current="page">About</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="row border border-primary mb-3">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/sample.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 </body>
 </html>
